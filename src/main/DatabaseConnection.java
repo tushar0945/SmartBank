@@ -1,5 +1,22 @@
 package main;
 
-public class DatabaseConnection {
+import java.sql.*;
 
+public class DatabaseConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/smartbank";
+    private static final String USER = "root";
+    private static final String PASSWORD = "Tushar@45";
+
+    public static Connection getConnection() {
+        Connection conn = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Database connected!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return conn;
+    }
 }

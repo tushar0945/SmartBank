@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Bank System",
+      "request": "launch",
+      "mainClass": "main.Main",
+      "classPaths": ["src", "lib/mysql-connector-j-9.5.0.jar"]
+    }
+  ]
+}
